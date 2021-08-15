@@ -28,7 +28,7 @@ Use the `styles.js` file in the `CoreElements` folder to setup the colors for yo
 
 Simply pass the following attributes into the component to apply them. See `app.js` for examples.
 
-* indicates default value
+\* indicates default value
 
 `override` is used to override the default styling in specific places. For example, the default font size of Heading is `40`, but say you want to use `60` is a specific place and give it `40` on the bottom margin just that one time. Simply set the override attribute to be `override={{ fontSize: 60, marginBottom: 40}}`. Overrides always get applied AFTER other styling so that they will take.
 
