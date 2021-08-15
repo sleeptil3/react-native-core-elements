@@ -70,7 +70,7 @@ export const ButtonSetValue = ({ overwrite = false, size, text, setState, state,
 		return (
 			<Button
 				accessibilityLabel={altText}
-				title={text} r
+				title={text}
 				color={color}
 				onPress={() => setState(newValue)}
 			/>
