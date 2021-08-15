@@ -26,7 +26,7 @@ Use the `styles.js` file in the `CoreElements` folder to setup the colors for yo
 
 ## Components & Attributes
 
-Simply pass the following attributes into the component to apply them. See `app.js` for examples.
+Simply pass the following attributes into the component to apply them. See `Examples.js` for examples.
 
 \* indicates default value
 
