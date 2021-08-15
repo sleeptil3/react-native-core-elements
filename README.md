@@ -96,3 +96,9 @@ Flex component that will create a `<View>` or `<SafeAreaView>` container with th
 - height: (number or string percentage) default is `auto`
 - width: (number or string percentage) default is `auto`
 - override: (object)
+
+
+## Screenshot
+
+
+![IMG_0E0DF966BD9B-1](https://user-images.githubusercontent.com/26289436/129485417-a39cfc95-dbf5-4e26-8478-f0c866d5643d.jpeg)
