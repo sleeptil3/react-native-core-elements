@@ -3,7 +3,7 @@
 
 ## What is this?
 
-I'm beginning to learn React-Native and created a basic set of custom components for font styles (like heading, title, body, etc.), button styles, a Flex Box component, as well as just some quick access to a couple preconfigured existing React Native Components (like a loading indicator or an Image).
+I'm beginning to learn React-Native and created a basic set of custom components for font styles (like heading, title, body, etc.), button styles, a Flex Box component, as well as just some quick access to a couple preconfigured existing React Native Components (like a loading indicator, a modal, and an Image).
 
 I am desigining purely for iOS at this point, but to my knowledge, I have thus far not used any iOS-only features.
 
