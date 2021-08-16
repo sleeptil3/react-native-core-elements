@@ -36,6 +36,7 @@ Simply pass the following attributes into the component to apply them. See `Exam
 > ### **A Note On the** `override` **Attribute**
 >
 > <hr>
+> 
 > The `override` attribute on all of the components is used to, well, *override* the default styling in one-off places. For example, the default font size of \<**Heading**> is `40`, but say you want to use `60` for that specific text and give it `40` for the bottom margin, but not edit the default \<**Heading**> component. Simply set the `override` attribute to be `override={{ fontSize: 60, marginBottom: 40}}`. 
 > </br>
 > </br>
