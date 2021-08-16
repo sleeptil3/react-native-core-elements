@@ -121,6 +121,11 @@ A `<Flex>` component that will create a `<View>` or `<SafeAreaView>` container w
 - `override`: (object)
   - see section above detailing this attribute
 
+## Existing React Components
+
+I just tossed these in as some ready-for-use and often used components, the most useful would probably be the fully configured pop-up bottom-third modal.
+
+
 ## Screenshot
 
 ![IMG_0E0DF966BD9B-1](https://user-images.githubusercontent.com/26289436/129485417-a39cfc95-dbf5-4e26-8478-f0c866d5643d.jpeg)
