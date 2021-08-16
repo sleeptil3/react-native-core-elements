@@ -1,4 +1,5 @@
 # React Native CoreElements
+
 ### Designed by Shawn Clary
 
 ## What is this?
@@ -22,83 +23,103 @@ To view on your device, download "Expo Go" from the AppStore, then use your iPho
 
 ## Color Configuration
 
-Use the `styles.js` file in the `CoreElements` folder to setup the colors for your app. This is mostly optional as you can pass string values through the attributes, but having this single source-of-authority for colors is a great best-practice for making easy color changes down the road.
+Use the `theme.js` file in the `CoreElements` folder to setup the colors for your app. This is mostly optional as you can pass string values through the attributes, but having this single source-of-authority for colors is a great best-practice for making easy color changes down the road.
 
 ## Components & Attributes
 
-Simply pass the following attributes into the component to apply them. See `Examples.js` for examples.
+Simply pass the following attributes into the component to apply them. See `Examples.js` for some implementation examples.
 
 \* indicates default value
+</br>
+</br>
 
-`override` is used to override the default styling in specific places. For example, the default font size of Heading is `40`, but say you want to use `60` is a specific place and give it `40` on the bottom margin just that one time. Simply set the override attribute to be `override={{ fontSize: 60, marginBottom: 40}}`. Overrides always get applied AFTER other styling so that they will take.
+> ### **A Note On the** `override` **Attribute**
+>
+> <hr>
+> The `override` attribute on all of the components is used to, well, *override* the default styling in one-off places. For example, the default font size of \<**Heading**> is `40`, but say you want to use `60` for that specific text and give it `40` for the bottom margin, but not edit the default \<**Heading**> component. Simply set the `override` attribute to be `override={{ fontSize: 60, marginBottom: 40}}`. 
+> </br>
+> </br>
+> *Overrides always get applied AFTER other styling so that they will take.*
+> </br>
+> </br>
 
-### FontStyles
+### **FontStyles**
 
- `text.js` in `CoreElements`
+`fontStyles.js` in `CoreElements`
 
-Included are Heading, Title, Subtitle, and Body as well as a font StyleSheet for customization.
+Included are \<**Heading**>, \<**Title**>, \<**Subtitle**>, and \<**Body**> as well as a font-style StyleSheet class for setting up the default styles.
 
-#### Attributes
+**Attributes**
 
-- align: (string) [auto*, left, right, center, justify]
-- override: (object) {property: value, ...}
-- color: (string)
+- `align`: (string) [auto*, left, right, center, justify]
+- `override`: (object) {property: value, ...}
+- `color`: (string)
+- `override`: (object)
+  - see section above detailing this attribute
+    </br>
+    </br>
 
-### Buttons
+### **Buttons**
 
- `buttons.js` in `CoreElements`
+`buttonStyles.js` in `CoreElements`
 
-Included are `ButtonToggle` and `ButtonSetValue`. `ButtonToggle` is for flipping a state variable between `false` or `true`. `ButtonSetValue` is used when you want to update the value of a state variable. It can be used to reassign a value, as well as add the value to an array or object variable.
+Included are \<**ButtonToggle**> and \<**ButtonSetValue**>. \<**ButtonToggle**> is for flipping a state variable between `false` or `true`. \<**ButtonSetValue**> is used when you want to update the value of a state variable. It can be used to reassign a value, increment/decrement, as well as append or push the value into an array or object state variable without overwriting the whole thing.
+</br>
+</br>
 
-#### Attributes
+**Attributes**
 
-- overwrite: (boolean) [false*, true]
+- `overwrite`: (boolean) [`false`*, `true`]
   - when set to `true`, whatever value you provide will overwrite the current state. If it is ommitted, or set to `false`, state is assumed to be an Array or Object and will be pushed or added to the state.
-- size: (string) [small, large]
-  - Small is a simpler text-only button (the default Button component), while large is a custom designed button with a background
-- text: (string)
-  - display text for the button
-- setState: (function)
-  - the function to be called to set the state. This is usually the setter from a `useState` hook, but can also be other things, like an `alert` for example.
-- state: (state variable)
-  - required if the current state is needed to complete the action, like an incrementer or adding to a state array
-- value: (any)
-  - what is assigned to the setState function
-- color: (string)
+- `size`: (string) [`small`, `large`]
+  - `small` is a simpler text-only button (the default Button component), while `large` is a custom designed button with a background
+- `text`: (string)
+  - the display text for the button
+- `setState`: (function)
+  - the function to be called on the value given to the button. This is usually a setter from a `useState` hook, but can also be other things, like an `alert` function for example.
+- `state`: (_optional_: current state of the variable you are updating)
+  - required if the current state is needed to complete the action, like an incrementer or pushing/adding to an array/object
+- `value`: (any)
+  - what is passed to the given `setState` function
+- `color`: (string)
   - the color of the button background
-- pressColor: (string)
+- `pressColor`: (string)
   - the color of the button background during a press (only applies to `large` buttons)
-- fontSize: (number) default is `18`
-- fontColor: (string) default is `colors.white`
-- altText: (string)
+- `fontSize`: (number) default is `18`
+- `fontColor`: (string) default is `colors.white`
+- `altText`: (string)
   - accessibility text for the button
-- override: (object)
+- `override`: (object)
+  - see section above detailing this attribute
+    </br>
+    </br>
 
-### Flex Container
+### **Flex Container**
 
- `containers.js` in `CoreElements`
+`containerStyles.js` in `CoreElements`
 
-Flex component that will create a `<View>` or `<SafeAreaView>` container with the following attributes. Note that `align-content` is omitted, as I rarely use it. You can easily add it if you need to or include it in the override.
+A `<Flex>` component that will create a `<View>` or `<SafeAreaView>` container with the following attributes.
 
-#### Attributes
+**Note**: `align-content` is omitted, as I rarely use it. You can easily add it if you need to or include it in the override.
 
-- direction: (string) [column*, row]
-- justify: (string) [flex-start*, flex-end, center, space-between, space-around, space-evenly]
+**Attributes**
+
+- `direction`: (string) [`column`*, `row`]
+- `justify`: (string) [`flex-start`*, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`]
   - This is the `justifyContent` property
-- align: (string) [flex-start*, flex-end, center, stetch, baseline]
+- `align`: (string) [`flex-start`*, `flex-end`, `center`, `stetch`, `baseline`]
   - This is the `alignItems` property
-- color: (string)
+- `color`: (string)
   - the background color of the container. The default is `transparent`
-- safe: (boolean) [false*, true]
+- `safe`: (boolean) [`false`*, `true`]
   - set this to `true` if you want to use a `SafeAreaView` container, which makes sure no content is located under the Status Bar at the top of iOS.
-- fill: (number)
-  - when stacking components, supplying a fill value will divide the space up proportionally to the elements. For example if you give the first component a `1` and the second component a `2`, that is `3` units total and the first component will take up `1/3` of the available space and the second will take up `2/3` of the available space. This maps to the `flex:` property.
-- height: (number or string percentage) default is `auto`
-- width: (number or string percentage) default is `auto`
-- override: (object)
-
+- `fill`: (number)
+  - when vertically stacking `<Flex>` components, supplying a fill value will divide the space up proportionally to the elements. For example if you give the first component a `1` and the second component a `2`, that is `3` units total and the first component will take up `1/3` of the available space and the second will take up `2/3` of the available space. This maps to the `flex:` property.
+- `height`: (number or string `%`) `auto`\*
+- `width`: (number or string `%`) `auto`\*
+- `override`: (object)
+  - see section above detailing this attribute
 
 ## Screenshot
-
 
 ![IMG_0E0DF966BD9B-1](https://user-images.githubusercontent.com/26289436/129485417-a39cfc95-dbf5-4e26-8478-f0c866d5643d.jpeg)

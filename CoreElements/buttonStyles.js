@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Button } from 'react-native';
-import { Subtitle } from './text';
-import { colors } from './styles';
+import { Subtitle } from './fontStyles';
+import { colors } from './theme';
 
 export const ButtonToggle = ({ size, setState, state, text, color, pressColor, altText, fontSize = 18, fontColor = colors.white }) => {
 	if (size === "large") {

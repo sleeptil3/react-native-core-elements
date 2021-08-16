@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { ActivityIndicator, Image, Modal, SafeAreaView, ScrollView, View } from 'react-native';
-import { Heading, Title, Subtitle, Body } from './CoreElements/text';
-import { Flex } from './CoreElements/containers';
-import { ButtonSetValue, ButtonToggle } from './CoreElements/buttons';
-import { colors } from './CoreElements/styles';
+import { Heading, Title, Subtitle, Body } from './CoreElements/fontStyles';
+import { Flex } from './CoreElements/containerStyles';
+import { ButtonSetValue, ButtonToggle } from './CoreElements/buttonStyles';
+import { colors } from './CoreElements/theme';
 
 
 export default function Examples() {

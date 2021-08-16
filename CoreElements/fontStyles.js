@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-import { colors } from './styles';
+import { colors } from './theme';
 
 export const Heading = ({ children, align, override, color }) => {
 	return (
