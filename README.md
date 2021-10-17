@@ -53,7 +53,6 @@ Included are \<**Heading**>, \<**Title**>, \<**Subtitle**>, and \<**Body**> as w
 **Attributes**
 
 - `align`: (string) [auto*, left, right, center, justify]
-- `override`: (object) {property: value, ...}
 - `color`: (string)
 - `override`: (object)
   - see section above detailing this attribute
